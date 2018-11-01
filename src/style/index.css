@@ -1,0 +1,341 @@
+html,
+body,
+div,
+p,
+span,
+em,
+i,
+u,
+del,
+strong,
+a,
+b,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+iframe,
+form,
+label,
+button,
+input,
+textarea,
+pre,
+hr,
+table,
+tbody,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*设置根目录font-size大小*/
+
+html {
+    font-size: 16px;
+    font-size: calc(100% + 2 * (100vw - 375px)/ 39);
+    font-size: calc(16px + 2 * (100vw - 375px)/ 39)
+}
+
+@media screen and (max-width:320px) {
+    html {
+        font-size: 16px
+    }
+}
+
+@media screen and (min-width:414px) {
+    html {
+        font-size: calc(112.5% + 4 * (100vw - 414px)/ 586);
+        font-size: calc(18px + 4 * (100vw - 414px)/ 586)
+    }
+}
+
+@media screen and (min-width:600px) {
+    html {
+        font-size: calc(125% + 4 * (100vw - 600px)/ 400);
+        font-size: calc(20px + 4 * (100vw - 600px)/ 400)
+    }
+}
+
+@media screen and (min-width:1000px) {
+    html {
+        font-size: calc(137.5% + 6 * (100vw - 1000px)/ 1000);
+        font-size: calc(22px + 6 * (100vw - 1000px)/ 1000)
+    }
+}
+
+
+/*设置页面字体类型*/
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+
+/*取消高亮效果和浏览器中自带的效果*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-user-select: none;
+    color: #333;
+    fill: currentColor;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none
+}
+
+em,
+i {
+    font-style: normal
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    box-sizing: border-box
+}
+
+input {
+    -webkit-border-radius: 0;
+    outline: none;
+}
+
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+    /* autoprefixer: off */
+    -webkit-appearance: none;
+    /* autoprefixer: on */
+    outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #C7C7C7;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #C7C7C7;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #C7C7C7;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #C7C7C7;
+}
+
+
+/*兼容ios版本设置按钮异样处理*/
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    color: inherit;
+    outline: 0
+}
+
+
+/*取消a标签的默认行为和高亮效果*/
+
+
+/*a[href]:active,button:active{background-image:-webkit-linear-gradient(to top,rgba(0,0,0,.05),rgba(0,0,0,.05));background-image:linear-gradient(to top,rgba(0,0,0,.05),rgba(0,0,0,.05))}*/
+
+body.iphone a[href]:active,
+body.iphone button:active {
+    background-image: none
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.fleft {
+    float: left
+}
+
+.fright {
+    float: right
+}
+
+
+/*取消div标签在移动端点击以后的高亮效果*/
+
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*兼容版本的弹性盒子写法*/
+
+.flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+}
+
+/*垂直居中*/
+
+.flex-box {
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+}
+
+
+/*均匀分列每个子集元素间距*/
+
+.flex-justify {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+}
+
+
+/*水平居中*/
+
+.flex-center {
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+}
+
+
+/*设置子集元素垂直排列兼容*/
+
+.flex-direction {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-box-orient: vertical;
+}
+
+
+/*超出显示1行*/
+
+.display-row1 {
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+
+/*超出显示两行*/
+
+.display-row2 {
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    word-break: break-all;
+}
+
+.page-wrapper {
+    padding: 0 0.90625rem;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.tabbar {
+    height: 3.125rem;
+}
+
+.page-wrapper+.tabbar {
+    height: 0rem;
+}
+
+
+/*下拉刷新样式重写*/
+
+.mint-loadmore-top span.rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.mint-loadmore-top p {
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+}
+
+.mint-loadmore-top span {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+a[title="站长统计"] {
+    display: none;
+}
+
+img.ubb {
+    width: auto;
+}
